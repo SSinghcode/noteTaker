@@ -1,7 +1,8 @@
+// requirements
 const express = require("express");
 const notesRouter = require("./notes");
 
-// Declaring App
+//app declaration
 const app = express();
 
 // Middleware
