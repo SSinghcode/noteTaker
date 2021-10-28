@@ -26,5 +26,10 @@ app.get("/notes", (req, res) =>
   res.sendFile(path.join(__dirname, "/public/notes.html"))
 );
 
+// wildcard error
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "/public/404.html"));
+});
+
 // Listening on Port
 app.listen(PORT, () => console.log(`Listening on http://localhost:${PORT} 🚀`));
