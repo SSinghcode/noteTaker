@@ -1,12 +1,12 @@
 // requirements
 const express = require("express");
-const notesRouter = require("./notes");
+const notesroute = require("./notes");
 
 //app declaration
 const app = express();
 
 // Middleware
-app.use("/notes", notesRouter);
+app.use("/notes", notesroute);
 
 // Exporting app
 module.exports = app;
