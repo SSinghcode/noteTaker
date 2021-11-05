@@ -1,9 +1,9 @@
 // requirements
 const express = require("express");
 const notesroute = require("./notes");
-
+const app= require("express").Router();
 //app declaration
-const app = express();
+
 
 // Middleware
 app.use("/notes", notesroute);
