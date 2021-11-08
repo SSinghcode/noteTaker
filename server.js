@@ -30,16 +30,16 @@ app.get("/notes", (req, res) =>
 
 
 app.delete("/api/notes/:id",(req,res)=>{
-  // verify that the DELET was received
+
   res.json(`${req.method}`);
   console.info(`${req.method}`);
   
   let listNote = JSON.parse(fs.readFileSync("./db/db.json"));
-  let noteID = (req.params.id).toString();
+  let noteuni = (req.params.id).toString();
 
-  listNote = listNote.filter(selected => selected.id != noteID)
+  listNote = listNote.filter(selected => selected.id != noteuni)
 
-  // update notes data
+ 
   fs.writeFileSync("./db/db.json",JSON.stringify(listNote));
   res.json(listNote)
 })
